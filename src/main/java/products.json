@@ -1,0 +1,16 @@
+{
+  "products" : [
+    {
+      "productId":"0001",
+      "name":"Kaisersemmel",
+      "productGroup":"Gebäck",
+      "price": "0.50"
+    },
+    {
+      "productId":"0001",
+      "name":"Kakao",
+      "productGroup":"Getränk",
+      "price": "1.50"
+    }
+  ]
+}
