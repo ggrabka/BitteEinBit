@@ -5,5 +5,6 @@ public class Main {
 
         Product test = new Product(4.5, "Getränke", "Bier");
         test.addProduct();
+        test.removeProduct();
     }
     }

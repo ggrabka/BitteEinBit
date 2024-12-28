@@ -51,11 +51,16 @@ public class Product {
     }
 
     public void removeProduct() {
-        //toDo
+        Helper helper = new Helper();
+        helper.readFromJsonFile();
+        helper.checkIfProductExistsInJsonFile(this);
+        helper.removeProductFromJsonFile(this);
     }
 
     @Override
     public String toString() {
         return "{productId=" + productId + ", productGroup=" + productGroup + ", name=" + name + ", price=" + price + "}";
     }
+
+    //ToDo: Add Override for equals and hash
 }

@@ -71,4 +71,15 @@ public class Helper {
             System.err.println("Error in writing the file.");
         }
     }
+
+    public void removeProductFromJsonFile(Product product) {
+        products.remove(product);
+        try {
+            FileWriter writer = new FileWriter("products.json");
+            gson.toJson(products,writer);
+            writer.close();
+        } catch (IOException e) {
+            System.err.println("Error in writing the file.");
+        }
+    }
 }
