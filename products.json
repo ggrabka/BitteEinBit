@@ -1,1 +1,44 @@
-[{"productId":1,"price":5.5,"productGroup":"Getränke","name":"Melange"},{"productId":2,"price":1.5,"productGroup":"Gebäck","name":"Kornspitz"},{"productId":3,"price":12.0,"productGroup":"Gebäck","name":"Pizza"},{"productId":4,"price":0.5,"productGroup":"Gebäck","name":"Kaisersemmel"},{"productId":5,"price":3.5,"productGroup":"Getränke","name":"Cappucino"}]
+[
+  {
+    "productId": 1,
+    "price": 5.5,
+    "productGroup": "Getränke",
+    "name": "Coffee"
+  },
+  {
+    "productId": 2,
+    "price": 1.5,
+    "productGroup": "Gebäck",
+    "name": "Kornspitz"
+  },
+  {
+    "productId": 3,
+    "price": 5.0,
+    "productGroup": "Getränke",
+    "name": "Cappucino"
+  },
+  {
+    "productId": 4,
+    "price": 3.5,
+    "productGroup": "Getränke",
+    "name": "Cola"
+  },
+  {
+    "productId": 5,
+    "price": 3.5,
+    "productGroup": "Getränke",
+    "name": "Fanta"
+  },
+  {
+    "productId": 6,
+    "price": 3.5,
+    "productGroup": "Getränke",
+    "name": "Sprite"
+  },
+  {
+    "productId": 7,
+    "price": 4.5,
+    "productGroup": "Getränke",
+    "name": "Bier"
+  }
+]

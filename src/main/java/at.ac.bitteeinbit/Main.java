@@ -1,10 +1,9 @@
 package at.ac.bitteeinbit;
-import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
-        Product test = new Product(3.50, "Getränke", "Cappucino");
+        Product test = new Product(4.5, "Getränke", "Bier");
         test.addProduct();
     }
     }
