@@ -1,16 +1,1 @@
-{
-  "products": [
-    {
-      "productId" : "001",
-      "productGroup" : "Getränke",
-      "name" : "Coffee",
-      "price" : "5.50"
-     },
-    {
-      "productId" : "001",
-      "productGroup" : "Gebäck",
-      "name" : "Kornspitz",
-      "price" : "1.50"
-    }
-  ]
-}
+[{"productId":1,"price":5.5,"productGroup":"Getränke","name":"Coffee"},{"productId":2,"price":1.5,"productGroup":"Gebäck","name":"Kornspitz"},{"productId":3,"price":10.0,"productGroup":"Gebäck","name":"Pizza"}]
