@@ -1,5 +1,7 @@
 package at.ac.bitteeinbit;
 
+import java.util.Objects;
+
 public class Product {
     private int productId;
     private double price;
@@ -62,5 +64,16 @@ public class Product {
         return "{productId=" + productId + ", productGroup=" + productGroup + ", name=" + name + ", price=" + price + "}";
     }
 
-    //ToDo: Add Override for equals and hash
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return Double.compare(price, product.price) == 0 && Objects.equals(productGroup, product.productGroup) && Objects.equals(name, product.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(price, productGroup, name);
+    }
 }

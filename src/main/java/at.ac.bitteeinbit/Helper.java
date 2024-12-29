@@ -14,13 +14,16 @@ import java.util.Scanner;
 
 
 public class Helper {
-    Gson gson = new Gson();
+
     int counter = 0;
+    public static final String PRODUCTS_JSON = "products.json";
+
     List<Product> products = new ArrayList<>();
+    Gson gson = new Gson();
 
     public void readFromJsonFile() {
         try {
-            FileReader reader = new FileReader("products.json");
+            FileReader reader = new FileReader(PRODUCTS_JSON);
             Type type = new TypeToken<ArrayList<Product>>() {}.getType();
             products = gson.fromJson(reader, type);
             reader.close();
@@ -64,7 +67,7 @@ public class Helper {
             products.add(product);
         }
         try {
-            FileWriter writer = new FileWriter("products.json");
+            FileWriter writer = new FileWriter(PRODUCTS_JSON);
             gson.toJson(products,writer);
             writer.close();
         } catch (IOException e) {
@@ -74,8 +77,19 @@ public class Helper {
 
     public void removeProductFromJsonFile(Product product) {
         products.remove(product);
+        writeToJsonFile();
         try {
-            FileWriter writer = new FileWriter("products.json");
+            FileWriter writer = new FileWriter(PRODUCTS_JSON);
+            gson.toJson(products,writer);
+            writer.close();
+        } catch (IOException e) {
+            System.err.println("Error in writing the file.");
+        }
+    }
+
+    public void writeToJsonFile() {
+        try {
+            FileWriter writer = new FileWriter(PRODUCTS_JSON);
             gson.toJson(products,writer);
             writer.close();
         } catch (IOException e) {
