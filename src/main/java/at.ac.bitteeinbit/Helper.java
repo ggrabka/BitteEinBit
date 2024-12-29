@@ -66,25 +66,23 @@ public class Helper {
             product.setProductId(counter);
             products.add(product);
         }
-        try {
-            FileWriter writer = new FileWriter(PRODUCTS_JSON);
-            gson.toJson(products,writer);
-            writer.close();
-        } catch (IOException e) {
-            System.err.println("Error in writing the file.");
-        }
+        writeToJsonFile();
     }
 
     public void removeProductFromJsonFile(Product product) {
-        products.remove(product);
-        writeToJsonFile();
-        try {
-            FileWriter writer = new FileWriter(PRODUCTS_JSON);
-            gson.toJson(products,writer);
-            writer.close();
-        } catch (IOException e) {
-            System.err.println("Error in writing the file.");
+        int sizeBeforeRemoval = products.size();
+        for (Product currentProduct : products) {
+            if (currentProduct.getName().equals(product.getName())) {
+                products.remove(product);
+                System.out.println("Product removed successfully.");
+                break;
+            }
+            counter++;
         }
+        if((products.size() == sizeBeforeRemoval)) {
+            System.out.println("No product found with the provided parameters!");
+        }
+        writeToJsonFile();
     }
 
     public void writeToJsonFile() {

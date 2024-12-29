@@ -55,7 +55,6 @@ public class Product {
     public void removeProduct() {
         Helper helper = new Helper();
         helper.readFromJsonFile();
-        helper.checkIfProductExistsInJsonFile(this);
         helper.removeProductFromJsonFile(this);
     }
 
