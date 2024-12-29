@@ -1,4 +1,4 @@
-package at.ac.bitteeinbit;
+package com.bitteEinBit;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -15,13 +15,14 @@ import java.util.Scanner;
 
 public class Helper {
 
+    private boolean isOverwritten;
     int counter = 0;
-    public static final String PRODUCTS_JSON = "products.json";
+    private static final String PRODUCTS_JSON = "products.json";
 
     List<Product> products = new ArrayList<>();
     Gson gson = new Gson();
 
-    public void readFromJsonFile() {
+    void readFromJsonFile() {
         try {
             FileReader reader = new FileReader(PRODUCTS_JSON);
             Type type = new TypeToken<ArrayList<Product>>() {}.getType();
@@ -36,10 +37,9 @@ public class Helper {
         }
     }
 
-    public void checkIfProductExistsInJsonFile(Product product) {
+    void checkIfProductExistsInJsonFile(Product product) {
         Scanner scanner = new Scanner(System.in);
         for (Product currentProduct : products) {
-            counter = currentProduct.getProductId();
             if (currentProduct.getName().equals(product.getName())) {
                 System.out.println("Product with the same name already exist. Do you wish to overwrite to the product? y/n");
                 String input = scanner.next();
@@ -48,44 +48,48 @@ public class Helper {
                     input = scanner.next();
                 }
                 if(input.equals("y")) {
-                    product.setProductId(counter);
                     currentProduct.setName(product.getName());
                     currentProduct.setPrice(product.getPrice());
                     currentProduct.setProductGroup(product.getProductGroup());
+                    isOverwritten = true;
                     break;
                 } else {
                     return;
                 }
             }
-            counter+=1;
+            counter++;
         }
     }
 
-    public void addProductToJsonFile(Product product) {
-        if(counter > products.size()) {
-            product.setProductId(counter);
+    void addProductToJsonFile(Product product) {
+        int productId = products.size();
+        for(Product currentProduct : products) {
+            if(currentProduct.getProductId()>=products.size()) {
+                productId++;
+            }
+        }
+        product.setProductId(productId);
+        if(!isOverwritten && counter == products.size()) {
             products.add(product);
         }
         writeToJsonFile();
     }
 
-    public void removeProductFromJsonFile(Product product) {
-        int sizeBeforeRemoval = products.size();
+    void removeProductFromJsonFile(Product product) {
         for (Product currentProduct : products) {
             if (currentProduct.getName().equals(product.getName())) {
                 products.remove(product);
                 System.out.println("Product removed successfully.");
                 break;
             }
-            counter++;
         }
-        if((products.size() == sizeBeforeRemoval)) {
+        if((!isOverwritten)) {
             System.out.println("No product found with the provided parameters!");
         }
         writeToJsonFile();
     }
 
-    public void writeToJsonFile() {
+    void writeToJsonFile() {
         try {
             FileWriter writer = new FileWriter(PRODUCTS_JSON);
             gson.toJson(products,writer);

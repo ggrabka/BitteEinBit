@@ -21,5 +21,5 @@ dependencies {
 }
 
 application {
-    mainClass = 'at.ac.bitteeinbit.Main'
+    mainClass = 'com.bitteEinBit.Main'
 }

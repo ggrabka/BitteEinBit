@@ -1,4 +1,4 @@
-package at.ac.bitteeinbit;
+package com.bitteEinBit;
 
 import java.util.Objects;
 
@@ -30,20 +30,19 @@ public class Product {
         return productGroup;
     }
 
-    protected void setProductId(int productId) {this.productId = productId;}
+    void setProductId(int productId) {this.productId = productId;}
 
-    protected void setName(String name) {
+    void setName(String name) {
         this.name = name;
     }
 
-    protected void setProductGroup(String productGroup) {
+    void setProductGroup(String productGroup) {
         this.productGroup = productGroup;
     }
 
-    protected void setPrice(double price) {
+    void setPrice(double price) {
         this.price = price;
     }
-
 
     public void addProduct() {
         Helper helper = new Helper();
