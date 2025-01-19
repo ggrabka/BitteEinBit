@@ -7,11 +7,27 @@ public class Product {
     private double price;
     private String productGroup;
     private String name;
+    private int quantity;
+
+    private Product[] products;
 
     public Product(double price, String productGroup, String name) {
         this.price = price;
         this.productGroup = productGroup;
         this.name = name;
+    }
+
+    public Product(String name, double price, int id) {
+
+        this.name = name;
+        this.price = price;
+        this.productId = id;
+        this.quantity = 0;
+    }
+
+    public Product(Product[] products) {
+
+        this.products = products;
     }
 
     public int getProductId() {
@@ -28,6 +44,37 @@ public class Product {
 
     public String getProductGroup() {
         return productGroup;
+    }
+
+    public int getQuantity() {
+
+        return quantity;
+    }
+
+    public void increaseQuantity() {
+
+        this.quantity++;
+    }
+
+    public void decreaseQuantity() {
+
+        if (this.quantity > 0) {
+
+            this.quantity--;
+        }
+    }
+
+    public void printProduct() {
+
+        System.out.printf(" >> %s %.2f €\n (Im Warenkorb: %d)\n", this.name, this.price, this.quantity);
+    }
+
+    public void displayProducts() {
+
+        for (Product product : products) {
+
+            System.out.println(product);
+        }
     }
 
     void setProductId(int productId) {this.productId = productId;}
@@ -60,6 +107,7 @@ public class Product {
     @Override
     public String toString() {
         return "{productId=" + productId + ", productGroup=" + productGroup + ", name=" + name + ", price=" + price + "}";
+        //return String.format(" // %s %.2f € Nr. %d", this.name, this.price, this.id);
     }
 
     @Override
