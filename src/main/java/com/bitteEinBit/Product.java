@@ -107,6 +107,7 @@ public class Product {
     @Override
     public String toString() {
         return "{productId=" + productId + ", productGroup=" + productGroup + ", name=" + name + ", price=" + price + "}";
+        //return String.format(" // %s %.2f € Nr. %d", this.name, this.price, this.id);
     }
 
     @Override

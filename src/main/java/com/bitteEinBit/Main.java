@@ -23,7 +23,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-
+        CashRegisterScreen cashRegisterScreen = new CashRegisterScreen();
+        cashRegisterScreen.startForCustomer();
+        cashRegisterScreen.printTransactions();
         Display display = new Display();
 
         display.displayEntrySelection();
