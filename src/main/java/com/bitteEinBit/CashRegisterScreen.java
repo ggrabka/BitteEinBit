@@ -1,4 +1,4 @@
-package at.ac.bitteeinbit;
+package com.bitteEinBit;
 
 import java.util.ArrayList;
 import java.util.Scanner;
