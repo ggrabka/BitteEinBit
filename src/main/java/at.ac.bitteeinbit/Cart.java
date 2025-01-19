@@ -75,7 +75,7 @@ public class Cart {
         for (Product product : myProducts) {
 
             System.out.printf(" >> %d x [(Nr. %d) %s : %.2f €] = %.2f €\n",
-                    product.getQuantity(), product.getId(), product.getName(), product.getPrice(), (product.getQuantity() * product.getPrice()));
+                    product.getQuantity(), product.getProductId(), product.getName(), product.getPrice(), (product.getQuantity() * product.getPrice()));
         }
 
         System.out.println();

@@ -256,7 +256,7 @@ public class CashRegisterScreen {
 
         for (Product product : Main.products) {
 
-            if (product.getId() == id) {
+            if (product.getProductId() == id) {
 
                 return product;
             }
@@ -269,7 +269,7 @@ public class CashRegisterScreen {
 
         for (Product product : Main.products) {
 
-            if (product.getId() == number) {
+            if (product.getProductId() == number) {
 
                 return true;
             }

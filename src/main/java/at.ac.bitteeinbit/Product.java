@@ -4,7 +4,7 @@ public class Product {
 
     private String name;
     private double price;
-    private int id;
+    private int productId;
     private int quantity;
 
     private Product[] products;
@@ -13,7 +13,7 @@ public class Product {
 
         this.name = name;
         this.price = price;
-        this.id = id;
+        this.productId = id;
         this.quantity = 0;
     }
 
@@ -32,9 +32,9 @@ public class Product {
         return price;
     }
 
-    public int getId() {
+    public int getProductId() {
 
-        return id;
+        return productId;
     }
 
     public int getQuantity() {
@@ -62,7 +62,7 @@ public class Product {
 
     public String toString() {
 
-        return String.format(" // %s %.2f € Nr. %d", this.name, this.price, this.id);
+        return String.format(" // %s %.2f € Nr. %d", this.name, this.price, this.productId);
     }
 
     public void displayProducts() {
