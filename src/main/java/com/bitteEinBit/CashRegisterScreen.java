@@ -44,6 +44,7 @@ public class CashRegisterScreen {
                         "  |   4   5   6   |   +   | \n" +
                         "  |   7   8   9   |   -   | \n" +
                         "  |   C   0   OK  |   #   | \n" +
+                        "  |   ,           |   #   | \n" +
                         "  ------------------------- \n" +
                         "    MENU  |    BEZAHLEN            \n" +
                         "  ------------------------- \n" +
@@ -152,8 +153,15 @@ public class CashRegisterScreen {
 
                     choice = button.next().charAt(0);
 
-                    if (choice >= '0' && choice <= '9') {
+                    while(choice == ',' && choiceString.isEmpty()) {
+                        System.out.println("Bitte einen Betrag vor dem Komma eingeben");
+                        choice = button.next().charAt(0);
+                    }
 
+                    if ((choice >= '0' && choice <= '9') || choice == ',') {
+                        if(choice == ',') {
+                            choice = '.';
+                        }
                         choiceString += choice;
 
                         displayCashRegisterScreenTop();
