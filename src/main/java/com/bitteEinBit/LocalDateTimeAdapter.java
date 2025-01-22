@@ -21,7 +21,7 @@ public class LocalDateTimeAdapter implements JsonSerializer<LocalDateTime>, Json
     }
 
     /**
-     * Deserialisiert eine JSON-Zeichenkette in ein `LocalDateTime`-Objekt.
+     * Deserialisiert esine JSON-Zeichenkette in ein `LocalDateTime`-Objekt.
      */
     @Override
     public LocalDateTime deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) {

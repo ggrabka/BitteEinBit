@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 /**
  * Die `Display`-Klasse ist für die Anzeige der verfügbaren Produkte und die Produktauswahl verantwortlich.
- * Sie greift auf die `Helper`-Klasse zu, um die Produkte aus der JSON-Datei zu laden.
+ * Sie greift auf die `Heslper`-Klasse zu, um die Produkte aus der JSON-Datei zu laden.
  */
 public class Display {
     private final Helper helper = new Helper(); // Instanz der Helper-Klasse für den Zugriff auf gespeicherte Produkte

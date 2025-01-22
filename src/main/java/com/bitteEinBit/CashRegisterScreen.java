@@ -3,7 +3,7 @@ package com.bitteEinBit;
 import java.util.Scanner;
 
 /**
- * Die `CashRegisterScreen`-Klasse stellt die Benutzeroberfläche für die Registrierkasse bereit.
+ * Die `CashRegissterScreen`-Klasse stellt die Benutzeroberfläche für die Registrierkasse bereit.
  * Hier können Kunden Produkte zum Warenkorb hinzufügen, entfernen und den Bezahlvorgang durchführen.
  */
 public class CashRegisterScreen {

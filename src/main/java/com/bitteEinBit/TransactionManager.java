@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Die `TransactionManager`-Klasse verwaltet alle Transaktionen des Kassensystems.
  * Sie speichert neue Transaktionen, lädt gespeicherte Transaktionen aus einer JSON-Datei
- * und erstellt einen Tagesabschlussbericht mit allen Transaktionen.
+ * und erstellt einen Tagesabschlusssbericht mit allen Transaktionen.
  */
 public class TransactionManager {
     // **Pfad zur JSON-Datei, in der die Transaktionen gespeichert werden.**

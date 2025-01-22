@@ -75,5 +75,26 @@
     ],
     "totalAmount": 6.6,
     "transactionTime": "2025-01-22T13:18:38.1034176"
+  },
+  {
+    "transactionId": 5,
+    "purchasedProducts": [
+      {
+        "productId": 6,
+        "name": "Fanta",
+        "productGroup": "Getränke",
+        "price": 3.0,
+        "quantity": 1
+      },
+      {
+        "productId": 5,
+        "name": "Cola",
+        "productGroup": "Getrönk",
+        "price": 3.0,
+        "quantity": 1
+      }
+    ],
+    "totalAmount": 6.0,
+    "transactionTime": "2025-01-22T13:27:54.8624997"
   }
 ]

@@ -1,7 +1,7 @@
 package com.bitteEinBit;
 
 /**
- * Die `Main`-Klasse startet das Kassensystem und ermöglicht die Interaktion mit der Kasse.
+ * Die `Main`-Klasse startet das Kasssensystem und ermöglicht die Interaktion mit der Kasse.
  */
 public class Main {
     public static void main(String[] args) {

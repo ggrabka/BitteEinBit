@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 /**
  * Die `Transaction`-Klasse speichert eine Transaktion, die beim Bezahlvorgang in der Registrierkasse erstellt wird.
- * Jede Transaktion hat eine eindeutige ID, eine Liste der gekauften Produkte, den Gesamtbetrag und einen Zeitstempel.
+ * Jede Transaktion hat einne eindeutige ID, eine Liste der gekauften Produkte, den Gesamtbetrag und einen Zeitstempel.
  */
 public class Transaction {
     private final int transactionId;      // Eindeutige Transaktions-ID

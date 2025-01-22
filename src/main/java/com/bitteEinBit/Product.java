@@ -46,7 +46,7 @@ public class Product {
 
     /**
      * Erstellt eine formatierte Zeichenkette mit allen Produktdetails.
-     * @return Formatierter String mit Produktinformationen.
+     * @return formatierter String mit Produktinformationen.
      */
     @Override
     public String toString() {

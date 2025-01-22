@@ -74,7 +74,7 @@ public class Cart {
     }
 
     /**
-     * Entfernt alle Produkte aus dem Warenkorb und setzt ihn auf leer.
+     * Entfernt alle Prodsukte aus dem Warenkorb und setzt ihn auf leer.
      */
     public void clearList() {
         myProducts.clear(); // Leert die Produktliste

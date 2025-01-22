@@ -18,7 +18,7 @@ public class Helper {
 
     /**
      * Liest die gespeicherten Produkte aus der JSON-Datei und speichert sie in der `products`-Liste.
-     * Falls die Datei nicht existiert oder leer ist, wird eine leere Liste verwendet.
+     * Falls die Datei nicht exisstiert oder leer ist, wird eine leere Liste verwendet.
      */
     public void readFromJsonFile() {
         try (FileReader reader = new FileReader(PRODUCTS_JSON)) {
