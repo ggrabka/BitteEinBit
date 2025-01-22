@@ -96,5 +96,33 @@
     ],
     "totalAmount": 6.0,
     "transactionTime": "2025-01-22T13:27:54.8624997"
+  },
+  {
+    "transactionId": 6,
+    "purchasedProducts": [
+      {
+        "productId": 2,
+        "name": "Kornspitz",
+        "productGroup": "Gebäck",
+        "price": 1.5,
+        "quantity": 2
+      }
+    ],
+    "totalAmount": 3.0,
+    "transactionTime": "2025-01-22T13:46:28.8580481"
+  },
+  {
+    "transactionId": 7,
+    "purchasedProducts": [
+      {
+        "productId": 2,
+        "name": "Kornspitz",
+        "productGroup": "Gebäck",
+        "price": 1.5,
+        "quantity": 1
+      }
+    ],
+    "totalAmount": 1.5,
+    "transactionTime": "2025-01-22T13:47:11.5424625"
   }
 ]
